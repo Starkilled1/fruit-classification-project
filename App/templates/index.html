@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Fruit Identification Model</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='format_fruit.css') }}">
+</head>
+
+<body>
+  <div style="background-image: url('https://cdn-icons-png.flaticon.com/256/3082/3082025.png'); height: 250px; width: 250px;">
+  </div>
+
+  <h1>Fruit Identification Model</h1>
+
+  <main>
+    <div class="container">
+      <div class="image-container">
+        <img id="fruit-image" src="" alt="Select an image">
+      </div>
+      <div class="file-input-container">
+        <input type="file" id="image-upload" class="file-input">
+        <label for="image-upload" class="file-label">
+          <span id="file-name">No file selected</span>
+        </label>
+      </div>
+      <div class="buttons">
+        <button id="identify-fruit">Identify Fruit</button>
+      </div>
+      <div id="result"></div>
+    </div>
+  </main>
+
+  <script src="{{ url_for('static', filename='result.js') }}"></script>
+
+  <p>StoryTelling</p>
+  <li>The purpose of this Fruit Identification Model is...</li>
+
+</body>
+</html>
