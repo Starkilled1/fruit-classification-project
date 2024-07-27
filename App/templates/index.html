@@ -35,20 +35,25 @@
     </div>
 
     <div class="container">
-        <div class="image-container">
-            <img id="fruit-image" src="" alt="Select an image">
-        </div>
-        <div class="file-input-container">
-            <input type="file" id="image-upload" class="file-input">
-            <label for="image-upload" class="file-label">
-                <span id="file-name">No file selected</span>
-            </label>
-        </div>
-        <div class="buttons">
-            <button id="identify-fruit">Identify Fruit</button>
-        </div>
-        <div id="result" class="alert alert-info mt-3" style="display: none;"></div>
-    </div>
+      <div class="d-flex flex-column align-items-center">
+          <div style="background-image: url('https://cdn-icons-png.flaticon.com/256/3082/3082025.png'); height: 250px; width: 250px;">
+          </div>
+          <h1>Fruit Identification Model</h1>
+      </div>
+      <div class="image-container">
+          <img id="fruit-image" src="" alt="Select an image">
+      </div>
+      <div class="file-input-container">
+          <input type="file" id="image-upload" class="file-input">
+          <label for="image-upload" class="file-label">
+              <span id="file-name">No file selected</span>
+          </label>
+      </div>
+      <div class="buttons">
+          <button id="identify-fruit">Identify Fruit</button>
+      </div>
+      <div id="result" class="alert alert-info mt-3" style="display: none;"></div>
+  </div>
 
     <footer class="footer bg-light text-center text-lg-start">
         <div class="container p-4">
