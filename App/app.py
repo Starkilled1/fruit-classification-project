@@ -18,7 +18,7 @@ def preprocess_image(image):
     image = image.resize((224, 224))
     image = np.array(image)
     image = np.expand_dims(image, axis=0)
-    image = tf.keras.applications.vgg16.preprocess_input(image)
+    image = tf.keras.applications.mobilenet_v2.preprocess_input(image)
     return image
 
 @app.route('/')
@@ -43,11 +43,6 @@ def predict():
         return jsonify({'prediction': predicted_class}), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
-
-if __name__ == '__main__':
-    app.run(debug=True)
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)
