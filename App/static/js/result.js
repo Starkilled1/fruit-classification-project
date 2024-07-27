@@ -1,5 +1,4 @@
 document.getElementById('identify-fruit').addEventListener('click', () => {
-  
   const image = document.getElementById('image-upload').files[0];
   if (!image) {
     alert('Please select an image first.');
@@ -15,13 +14,17 @@ document.getElementById('identify-fruit').addEventListener('click', () => {
   })
   .then(response => response.json())
   .then(data => {
-    d3.select('#result')
-      .html(`The predicted class of the image is: ${data.prediction}`);
+    const resultDiv = document.getElementById('result');
+    resultDiv.style.display = 'block';
+    resultDiv.className = 'alert alert-success mt-3';
+    resultDiv.innerHTML = `The predicted class of the image is: <strong>${data.prediction}</strong>`;
   })
   .catch(error => {
     console.error('Error:', error);
-    d3.select('#result')
-      .html(`Error: ${error.message}`);
+    const resultDiv = document.getElementById('result');
+    resultDiv.style.display = 'block';
+    resultDiv.className = 'alert alert-danger mt-3';
+    resultDiv.innerHTML = `Error: ${error.message}`;
   });
 });
 
@@ -45,5 +48,6 @@ imageUpload.addEventListener('change', (event) => {
     fileName.textContent = "No file selected";
   }
 });
+
 
   

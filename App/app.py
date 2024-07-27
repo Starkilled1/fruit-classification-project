@@ -8,11 +8,9 @@ import io
 app = Flask(__name__)
 
 # Load the trained model and label encoder
-model = tf.keras.models.load_model('../NeuralNetwork_train_model/fruit_classifier_mobilenetv2_final.h5')
-
-with open('../label_encoder.pkl', 'rb') as file:
+model = tf.keras.models.load_model('model/fruit_classifier_mobilenetv2_final.h5')
+with open('model/label_encoder.pkl', 'rb') as file:
     label_encoder = pickle.load(file)
-    
 
 def preprocess_image(image):
     image = image.resize((224, 224))
@@ -25,6 +23,13 @@ def preprocess_image(image):
 def index():
     return render_template('index.html')
 
+@app.route('/endpoints_list')
+def endpoints_list():
+    return render_template('endpoints_list.html')
+
+@app.route('/storytelling')
+def storytelling():
+    return render_template('storytelling.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -46,3 +51,5 @@ def predict():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
