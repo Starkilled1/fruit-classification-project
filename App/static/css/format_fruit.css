@@ -1,20 +1,10 @@
 body {
   font-family: helvetica;
-  color: #000000;
-  background-color: #e5fce5;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-h1 {
-  font-family: 'Arial', sans-serif;
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  color: #333;
-  text-align: center;
+  background-color: #e5fce5;
+  margin: 0;
 }
 
 .container {
@@ -23,14 +13,19 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 60px; /* Add padding to account for the fixed navbar */
+}
+
+h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .image-container {
   border: 1px solid #000000;
   padding: 10px;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 img {
@@ -38,14 +33,15 @@ img {
   height: auto;
 }
 
-.buttons {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
+.file-input-container {
   margin-top: 20px;
 }
 
-button {
+.file-input {
+  display: none;
+}
+
+.file-label {
   padding: 10px 20px;
   background-color: #4CAF50;
   color: white;
@@ -54,23 +50,53 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.file-label:hover {
   background-color: #45a049;
 }
 
-.file-input-container {
-  text-align: center;
-  margin-bottom: 20px;
+.buttons {
+  margin-top: 20px;
 }
 
-.alert {
-  text-align: center;
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.fixed-top {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1030;
+button:hover {
+  background-color: #0056b3;
 }
 
+#result {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: left;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 5px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
