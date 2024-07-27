@@ -1,53 +1,54 @@
-document.getElementById('identify-fruit').addEventListener('click', () => {
-  const image = document.getElementById('image-upload').files[0];
-  if (!image) {
-    alert('Please select an image first.');
-    return;
+document.getElementById('identify-fruit').addEventListener('click', async () => {
+  const fileInput = document.getElementById('image-upload');
+  const resultDiv = document.getElementById('result');
+  
+  if (fileInput.files.length === 0) {
+      resultDiv.textContent = 'Please select an image file.';
+      resultDiv.style.display = 'block';
+      return;
+  }
+  
+  const file = fileInput.files[0];
+  const formData = new FormData();
+  formData.append('file', file);
+
+  try {
+      const response = await fetch('/predict', {
+          method: 'POST',
+          body: formData
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+          resultDiv.textContent = `The predicted fruit is: ${data.prediction}`;
+      } else {
+          resultDiv.textContent = `Error: ${data.error}`;
+      }
+  } catch (error) {
+      resultDiv.textContent = `Error: ${error.message}`;
   }
 
-  const formData = new FormData();
-  formData.append('file', image);
-
-  fetch('/predict', {
-    method: 'POST',
-    body: formData,
-  })
-  .then(response => response.json())
-  .then(data => {
-    const resultDiv = document.getElementById('result');
-    resultDiv.style.display = 'block';
-    resultDiv.className = 'alert alert-success mt-3';
-    resultDiv.innerHTML = `The predicted class of the image is: <strong>${data.prediction}</strong>`;
-  })
-  .catch(error => {
-    console.error('Error:', error);
-    const resultDiv = document.getElementById('result');
-    resultDiv.style.display = 'block';
-    resultDiv.className = 'alert alert-danger mt-3';
-    resultDiv.innerHTML = `Error: ${error.message}`;
-  });
+  resultDiv.style.display = 'block';
 });
 
-const imageUpload = document.getElementById('image-upload');
-const fruitImage = document.getElementById('fruit-image');
-const fileName = document.getElementById('file-name');
-
-imageUpload.addEventListener('change', (event) => {
+// Code to handle file input and display the image
+document.getElementById('image-upload').addEventListener('change', (event) => {
   const file = event.target.files[0];
   const reader = new FileReader();
-
+  
   reader.onload = (e) => {
-    fruitImage.src = e.target.result;
-    fileName.textContent = file.name;
+      document.getElementById('fruit-image').src = e.target.result;
+      document.getElementById('file-name').textContent = file.name;
   }
 
   if (file) {
-    reader.readAsDataURL(file);
+      reader.readAsDataURL(file);
   } else {
-    fruitImage.src = "";
-    fileName.textContent = "No file selected";
+      document.getElementById('fruit-image').src = "";
+      document.getElementById('file-name').textContent = "No file selected";
   }
 });
+
 
 
   
