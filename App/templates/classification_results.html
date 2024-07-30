@@ -148,6 +148,73 @@
                 </div>
             </div>
         </div>
+
+        <hr>
+
+        <h1 class="text-center mt-5">Model 4 Classification Results</h1>
+        <div class="row">
+            <div class="col-md-6 d-flex flex-column align-items-center">
+                <div class="image-container">
+                    <img src="../static/img/Accuracy_Epoch_Graph_images_app/model_4.png" alt="Accuracy Epoch Graph">
+                    <p>Training and Validation Accuracy</p>
+                </div>
+                <div class="image-container">
+                    <img src="../static/img/Confusion_matrix_images_app/model_4.png" alt="Confusion Matrix">
+                    <p>Confusion Matrix</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="explanation-container">
+                    <h2>Model 4 Analysis</h2>
+                    <p><strong>Training and Validation Accuracy:</strong></p>
+                    <ul>
+                        <li>The training accuracy of Model 4 improves consistently, reaching close to 0.9 by the 9th epoch.</li>
+                        <li>The validation accuracy starts around 0.6 and shows minor fluctuations but generally trends upwards, peaking at around 0.7.</li>
+                        <li>There is a noticeable gap between the training and validation accuracy, indicating potential overfitting.</li>
+                    </ul>
+                    <p>Model 4 shows high training accuracy but noticeable overfitting and confusion in certain categories.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h1 class="text-center mt-5">Model 5 Classification Results</h1>
+        <div class="row">
+            <div class="col-md-6 d-flex flex-column align-items-center">
+                <div class="image-container">
+                    <img src="../static/img/Accuracy_Epoch_Graph_images_app/model_5.png" alt="Accuracy Epoch Graph">
+                    <p>Training and Validation Accuracy</p>
+                </div>
+                <div class="image-container">
+                    <img src="../static/img/Confusion_matrix_images_app/model_5.png" alt="Confusion Matrix">
+                    <p>Confusion Matrix</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="explanation-container">
+                    <h2>Model 5 Analysis</h2>
+                    <p><strong>Training and Validation Accuracy:</strong></p>
+                    <ul>
+                        <li>Training accuracy reaches close to 1.0.</li>
+                        <li>Validation accuracy starts high, fluctuates slightly, and stabilizes around 0.875.</li>
+                    </ul>
+                    <p><strong>Confusion Matrix:</strong></p>
+                    <ul>
+                        <li>Best overall performance with high accuracy across all categories.</li>
+                        <li>"Apple" (318 correct), "Banana" (315 correct), "Grape" (368 correct), "Mango" (343 correct), and "Strawberry" (361 correct) show strong prediction accuracy.</li>
+                        <li>Minimal misclassifications, indicating a robust model.</li>
+                    </ul>
+                    <p><strong>Overall Comparison:</strong></p>
+                    <ul>
+                        <li>Accuracy: Model 5 shows the best overall accuracy in both training and validation phases. It also has the highest number of correct predictions across all categories.</li>
+                        <li>Stability: Models 3 and 5 show the least fluctuation in validation accuracy, indicating more stable performance.</li>
+                        <li>Misclassifications: Model 3 and Model 5 have the fewest misclassifications, making them the most reliable for predictions.</li>
+                        <li>Recommendation: Based on the comparison, Model 5 is the most robust and accurate for predicting the given categories, followed closely by Model 3.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="footer bg-light text-left text-lg-start mt-auto">
@@ -177,6 +244,4 @@
 </body>
 
 </html>
-
-
 

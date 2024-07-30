@@ -4,6 +4,9 @@ body {
     margin-top: 60px;
 }
 
+h1 {
+    padding-bottom: 15px;
+}
 .image-container {
     margin: 20px 0;
     text-align: center;
