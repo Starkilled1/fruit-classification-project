@@ -44,11 +44,11 @@
         <div class="row">
             <div class="col-md-6 d-flex flex-column align-items-center">
                 <div class="image-container">
-                    <img src="../static/img/Accuracy_Epoch_Graph_images_app/model_1.png" alt="Accuracy Epoch Graph">
+                    <img src="App/static/img/Accuracy_Epoch_Graph_images_app/model_1.png" alt="Accuracy Epoch Graph">
                     <p>Training and Validation Accuracy</p>
                 </div>
                 <div class="image-container">
-                    <img src="../static/img/Confusion_matrix_images_app/model_1.png" alt="Confusion Matrix">
+                    <img src="App/static/img/Confusion_matrix_images_app/model_1.png" alt="Confusion Matrix">
                     <p>Confusion Matrix</p>
                 </div>
             </div>
@@ -93,6 +93,29 @@
                 </div>
             </div>
         </div>
+
+        <hr>
+
+        <h1 class="text-center mt-5">Model 2 Classification Results</h1>
+        <div class="row">
+            <div class="col-md-6 d-flex flex-column align-items-center">
+                <div class="image-container">
+                    <img src="../static/img/Accuracy_Epoch_Graph_images_app/model_2.png" alt="Accuracy Epoch Graph">
+                    <p>Training and Validation Accuracy</p>
+                </div>
+                <div class="image-container">
+                    <img src="../static/img/Confusion_matrix_images_app/model_2.png" alt="Confusion Matrix">
+                    <p>Confusion Matrix</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="explanation-container">
+                    <h2>Model 2 Analysis</h2>
+                    <p>In the training and validation accuracy graph for Model 2, the training accuracy steadily increases, reaching nearly 0.9, while the validation accuracy shows an upward trend initially but plateaus and slightly decreases towards the end, stabilizing around 0.7. This suggests that the model is learning well on the training data but is starting to overfit as the validation accuracy does not increase correspondingly after a certain point.</p>
+                    <p>The confusion matrix for Model 2 shows better performance compared to Model 1. The counts for true positives (diagonal elements) are higher across most categories, especially for "Grape" and "Strawberry," indicating that Model 2 has improved its classification accuracy for these categories. There are fewer misclassifications overall, as seen in the reduced off-diagonal counts compared to Model 1.</p>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="footer bg-light text-left text-lg-start mt-auto">
@@ -122,4 +145,5 @@
 </body>
 
 </html>
+
 
