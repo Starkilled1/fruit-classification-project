@@ -29,6 +29,10 @@ def storytelling():
 def endpoints_list():
     return render_template('endpoints_list.html')
 
+@app.route('/classification_results')
+def classification_results():
+    return render_template('classification_results.html')
+
 @app.route('/predict', methods=['POST'])
 def predict():
     if 'file' not in request.files:
