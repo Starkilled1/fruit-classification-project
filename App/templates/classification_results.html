@@ -41,14 +41,56 @@
 
     <main class="container mt-5 pt-5">
         <h1 class="text-center">Model 1 Classification Results</h1>
-        <div class="d-flex flex-column align-items-center">
-            <div class="image-container">
-                <img src="../static/img/Accuracy_Epoch_Graph_images_app/model_1.png" alt="Accuracy Epoch Graph">
-                <p>Training and Validation Accuracy</p>
+        <div class="row">
+            <div class="col-md-6 d-flex flex-column align-items-center">
+                <div class="image-container">
+                    <img src="../static/img/Accuracy_Epoch_Graph_images_app/model_1.png" alt="Accuracy Epoch Graph">
+                    <p>Training and Validation Accuracy</p>
+                </div>
+                <div class="image-container">
+                    <img src="../static/img/Confusion_matrix_images_app/model_1.png" alt="Confusion Matrix">
+                    <p>Confusion Matrix</p>
+                </div>
             </div>
-            <div class="image-container">
-                <img src="../static/img/Confusion_matrix_images_app/model_1.png" alt="Confusion Matrix">
-                <p>Confusion Matrix</p>
+            <div class="col-md-6">
+                <div class="explanation-container">
+                    <h2>Model 1 Analysis</h2>
+                    <p>The graph depicts the training and validation accuracy of Model 1 over 10 epochs. The training accuracy shows a steady increase, indicating that the model is learning and fitting the training data progressively better. In contrast, the validation accuracy exhibits a slight initial rise followed by fluctuations, and it remains substantially lower than the training accuracy. This pattern suggests that while the model is becoming more accurate on the training data, it is not generalizing well to the validation data, indicating possible overfitting.</p>
+                    <h3>Confusion Matrix Breakdown</h3>
+                    <ul>
+                        <li><strong>Apple:</strong>
+                            <ul>
+                                <li>Correctly classified: 187</li>
+                                <li>Most common misclassifications: Mango (51), Strawberry (80)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Banana:</strong>
+                            <ul>
+                                <li>Correctly classified: 177</li>
+                                <li>Most common misclassifications: Mango (65), Apple (62)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Grape:</strong>
+                            <ul>
+                                <li>Correctly classified: 271</li>
+                                <li>Most common misclassifications: Apple (62), Banana (38)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Mango:</strong>
+                            <ul>
+                                <li>Correctly classified: 245</li>
+                                <li>Most common misclassifications: Banana (62), Apple (56)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Strawberry:</strong>
+                            <ul>
+                                <li>Correctly classified: 306</li>
+                                <li>Most common misclassifications: Apple (48), Banana (17)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>The confusion matrix reveals that while the model performs well in classifying certain categories like Grape and Strawberry, it struggles more with others, notably Apple and Mango, which are frequently misclassified as other fruits. This indicates areas where the model could be improved.</p>
+                </div>
             </div>
         </div>
     </main>
@@ -80,3 +122,4 @@
 </body>
 
 </html>
+

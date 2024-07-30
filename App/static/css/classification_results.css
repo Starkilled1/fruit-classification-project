@@ -21,3 +21,36 @@ body {
     margin-top: 10px;
     font-weight: bold;
 }
+
+.explanation-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.explanation-container h2 {
+    margin-bottom: 20px;
+}
+
+.explanation-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.explanation-container ul li {
+    margin-bottom: 10px;
+}
+
+.explanation-container ul li ul {
+    margin-top: 5px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: left;
+}
+
