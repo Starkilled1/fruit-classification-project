@@ -44,11 +44,11 @@
         <div class="row">
             <div class="col-md-6 d-flex flex-column align-items-center">
                 <div class="image-container">
-                    <img src="App/static/img/Accuracy_Epoch_Graph_images_app/model_1.png" alt="Accuracy Epoch Graph">
+                    <img src="../static/img/Accuracy_Epoch_Graph_images_app/model_1.png" alt="Accuracy Epoch Graph">
                     <p>Training and Validation Accuracy</p>
                 </div>
                 <div class="image-container">
-                    <img src="App/static/img/Confusion_matrix_images_app/model_1.png" alt="Confusion Matrix">
+                    <img src="../static/img/Confusion_matrix_images_app/model_1.png" alt="Confusion Matrix">
                     <p>Confusion Matrix</p>
                 </div>
             </div>
@@ -116,6 +116,38 @@
                 </div>
             </div>
         </div>
+
+        <hr>
+
+        <h1 class="text-center mt-5">Model 3 Classification Results</h1>
+        <div class="row">
+            <div class="col-md-6 d-flex flex-column align-items-center">
+                <div class="image-container">
+                    <img src="../static/img/Accuracy_Epoch_Graph_images_app/model_3.png" alt="Accuracy Epoch Graph">
+                    <p>Training and Validation Accuracy</p>
+                </div>
+                <div class="image-container">
+                    <img src="../static/img/Confusion_matrix_images_app/model_3.png" alt="Confusion Matrix">
+                    <p>Confusion Matrix</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="explanation-container">
+                    <h2>Model 3 Analysis</h2>
+                    <p><strong>Training and Validation Accuracy:</strong></p>
+                    <ul>
+                        <li>Training Accuracy: The training accuracy for Model 3 starts around 0.80 and quickly rises to 1.00, indicating the model learns the training data very well over epochs.</li>
+                        <li>Validation Accuracy: The validation accuracy starts at 0.85 and slightly increases but then plateaus around 0.86. This indicates that while the model learns the training data very well, it does not generalize as effectively to the validation data, suggesting potential overfitting.</li>
+                    </ul>
+                    <p><strong>Summary:</strong></p>
+                    <ul>
+                        <li>Model 1: Shows moderate overfitting and performs reasonably well with a validation accuracy of around 0.65.</li>
+                        <li>Model 2: Shows better generalization than Model 1, achieving a validation accuracy of around 0.73, with fewer misclassifications.</li>
+                        <li>Model 3: Although it has the highest training accuracy, it shows signs of overfitting. It achieves a validation accuracy of around 0.86 and has the most balanced and accurate confusion matrix results across all models.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="footer bg-light text-left text-lg-start mt-auto">
@@ -140,10 +172,11 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     </script>
 </body>
 
 </html>
+
 
 
