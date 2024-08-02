@@ -14,7 +14,7 @@ body {
     align-items: center;
     justify-content: center;
     padding-top: 60px; /* Add padding to account for the fixed navbar */
-    text-align: center;
+    text-align: left;
 }
 
 h1 {
