@@ -38,56 +38,6 @@ As we move forward with this pilot project, we have outlined several next steps 
 
 By following these steps, we aim to enhance the functionality and reliability of our fruit image detection model, ensuring it meets the needs of both supermarkets and their customers.
 
----
-
-## Presentation Slides
-
-### Slide 1: Introduction
-**Title:** Revolutionizing Supermarket Operations with AI  
-**Overview:** In a rapidly advancing technological world, supermarkets seek to enhance customer experiences and optimize operations. Our fruit image detection project using a machine learning model addresses these trends with innovative solutions.
-
-### Slide 2: Customer Experience
-**Title:** Enhancing Customer Experience  
-**Scenario:** Imagine a supermarket where customers effortlessly identify fruits at self-service scales.  
-**Technology:** Smart scales equipped with our AI model automatically recognize each fruit, providing precise identification without errors.  
-**Benefits:** Reduces wait times and minimizes frustrations associated with incorrect identification.
-
-### Slide 3: Operational Efficiency
-**Title:** Improving Operational Efficiency  
-**Impact:** Significant improvement in current processes by eliminating classification errors.  
-**Economic Benefit:** Reduces economic losses associated with incorrect product identification.  
-**Customer Satisfaction:** Increases satisfaction with faster, more efficient service.
-
-### Slide 4: Our Model
-
-### Slide 5: Data Privacy and Security
-**Title:** Addressing Data Privacy and Security  
-**Overview:** Although we have not yet implemented all security measures, we are aware of the importance of addressing data privacy and security issues in the future. We are committed to developing and applying strict security and compliance measures to ensure that consumer data is handled ethically and securely.
-
-### Slide 6: Benefits for Stakeholders
-**Title:** Broad Benefits of Our Technology  
-**Consumers:** Enjoy a quick, hassle-free shopping experience with always fresh products.  
-**Supermarkets:** Optimize operations, reduce costs, and obtain valuable data on customer preferences and behaviors.  
-**Data Utilization:** Enables better inventory planning and effective marketing strategies.
-
-### Slide 7: Summary
-**Title:** Towards a Modernized Shopping Experience  
-**Summary:** Implementation of our fruit image detection model modernizes the shopping experience, promising a future of efficiency and customer satisfaction.  
-**Vision:** Technology and innovation creating an ideal shopping environment.
-
-### Slide 8: Next Steps
-**Title:** Next Steps for Implementation  
-**Pilot Implementation:** Launch in selected supermarkets. Gather feedback from customers and staff.  
-**Data Collection and Analysis:** Focus on accuracy and user experience. Refine the model based on data.  
-**Security and Privacy Measures:** Develop and implement security protocols. Ensure compliance with data protection regulations.  
-**Training and Support:** Provide training for supermarket staff. Establish a support system for technical assistance.  
-**Scalability and Expansion:** Assess scalability for wider implementation. Plan phased rollout based on pilot success.
-
-### Slide 9: Conclusion
-**Title:** Ensuring Success and Reliability  
-**Goal:** Enhance functionality and reliability of our fruit image detection model.  
-**Outcome:** Meet the needs of both supermarkets and their customers.
-
 # Model Analysis Summary
 
 ## Model 1
@@ -95,8 +45,14 @@ By following these steps, we aim to enhance the functionality and reliability of
 ### Training and Validation Accuracy:
 The graph depicts the training and validation accuracy of Model 1 over 10 epochs. The training accuracy shows a steady increase, indicating that the model is progressively learning and fitting the training data better. However, the validation accuracy exhibits a slight initial rise followed by fluctuations, and it remains substantially lower than the training accuracy. This pattern suggests that while the model is becoming more accurate on the training data, it is not generalizing well to the validation data, indicating possible overfitting.
 
+![Accuracy Epoch for Model 1](Accuracy_Epoch_Graph_images/model_1.png)
+
 ### Confusion Matrix:
-The confusion matrix provides detailed insights into the performance of the classification model for predicting five categories: Apple, Banana, Grape, Mango, and Strawberry. Here’s a breakdown:
+The confusion matrix provides detailed insights into the performance of the classification model for predicting five categories: Apple, Banana, Grape, Mango, and Strawberry.
+
+![Confusion Matrix for Model 1](Confusion_matrix_images/model_1.png)
+
+Here’s a breakdown:
 - **Apple:** Correctly classified: 187, Most common misclassifications: Mango (51), Strawberry (80)
 - **Banana:** Correctly classified: 177, Most common misclassifications: Mango (65), Apple (62)
 - **Grape:** Correctly classified: 271, Most common misclassifications: Apple (62), Banana (38)
@@ -110,8 +66,12 @@ The confusion matrix reveals that while the model performs well in classifying c
 ### Training and Validation Accuracy:
 In the training and validation accuracy graph for Model 2, the training accuracy steadily increases, reaching nearly 0.9, while the validation accuracy shows an upward trend initially but plateaus and slightly decreases towards the end, stabilizing around 0.7. This suggests that the model is learning well on the training data but is starting to overfit as the validation accuracy does not increase correspondingly after a certain point.
 
+![Accuracy Epoch for Model 2](Accuracy_Epoch_Graph_images/model_2.png)
+
 ### Confusion Matrix:
 The confusion matrix for Model 2 shows better performance compared to Model 1. The counts for true positives (diagonal elements) are higher across most categories, especially for "Grape" and "Strawberry," indicating that Model 2 has improved its classification accuracy for these categories. There are fewer misclassifications overall, as seen in the reduced off-diagonal counts compared to Model 1.
+
+![Confusion Matrix for Model 2](Confusion_matrix_images/model_2.png)
 
 ## Model 3
 
@@ -119,8 +79,12 @@ The confusion matrix for Model 2 shows better performance compared to Model 1. T
 - **Training Accuracy:** The training accuracy for Model 3 starts around 0.80 and quickly rises to 1.00, indicating the model learns the training data very well over epochs.
 - **Validation Accuracy:** The validation accuracy starts at 0.85 and slightly increases but then plateaus around 0.86. This indicates that while the model learns the training data very well, it does not generalize as effectively to the validation data, suggesting potential overfitting.
 
+![Accuracy Epoch for Model 3](Accuracy_Epoch_Graph_images/model_3.png)
+
 ### Confusion Matrix:
 Model 3 shows a balanced and accurate confusion matrix with higher correct classifications and fewer misclassifications compared to Models 1 and 2.
+
+![Confusion Matrix for Model 3](Confusion_matrix_images/model_3.png)
 
 ## Model 4
 
@@ -128,14 +92,20 @@ Model 3 shows a balanced and accurate confusion matrix with higher correct class
 - **Training Accuracy:** Improves consistently, reaching close to 0.9 by the 9th epoch.
 - **Validation Accuracy:** Starts around 0.6, fluctuates slightly, but generally trends upwards, peaking at around 0.7. There is a noticeable gap between the training and validation accuracy, indicating potential overfitting.
 
+![Accuracy Epoch for Model 4](Accuracy_Epoch_Graph_images/model_4.png)
+
 ### Confusion Matrix:
 Model 4 shows high training accuracy but noticeable overfitting and confusion in certain categories.
+
+![Confusion Matrix for Model 4](Confusion_matrix_images/model_4.png)
 
 ## Model 5
 
 ### Training and Validation Accuracy:
 - **Training Accuracy:** Reaches close to 1.0.
 - **Validation Accuracy:** Starts high, fluctuates slightly, and stabilizes around 0.875.
+
+![Accuracy Epoch for Model 5](Accuracy_Epoch_Graph_images/model_5.png)
 
 ### Confusion Matrix:
 Model 5 demonstrates the best overall performance with high accuracy across all categories:
@@ -147,6 +117,8 @@ Model 5 demonstrates the best overall performance with high accuracy across all 
 
 There are minimal misclassifications, indicating a robust model.
 
+![Confusion Matrix for Model 5](Confusion_matrix_images/model_5.png)
+
 ## Overall Comparison:
 
 - **Accuracy:** Model 5 shows the best overall accuracy in both training and validation phases. It also has the highest number of correct predictions across all categories.
@@ -155,4 +127,7 @@ There are minimal misclassifications, indicating a robust model.
 
 ### Recommendation:
 Based on the comparison, Model 5 is the most robust and accurate for predicting the given categories, followed closely by Model 3.
+
+## Dataset Information
+The dataset used for training the neural network models can be found on Kaggle: [Fruits Classification Dataset](https://www.kaggle.com/datasets/utkarshsaxenadn/fruits-classification).
 
